@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello HomeController!{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <h1 class="my-5">Les informations sur votre show:</h1>
+
+        <div class="card mb-3 mx-auto">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ show.name }}</h5>
+                        <p class="card-text">
+                            <small class="text-muted">{{ show.studio }}, {{ show.genre }}</small>
+                            <small class="text-muted"> {{ show.type}} </small>
+                        </p>
+                        <p class="card-text">
+                            <small class="text-muted">{{ show.synopsis }}</small>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

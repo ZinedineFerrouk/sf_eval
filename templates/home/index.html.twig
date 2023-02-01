@@ -1,0 +1,44 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello HomeController!{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <h1 class="my-5">Bienvenue sur NetFleet</h1>
+
+        <button type="button" class="btn btn-secondary"><a href="{{ path('app_create_show') }}">Créer un Show</a></button>
+
+        <table class="table table-hover">
+            <thead>
+            <tr>
+                <th scope="col">Nom du Show</th>
+                <th scope="col">Type de show</th>
+                <th scope="col">Studio de production</th>
+                <th scope="col">Genre</th>
+                <th scope="col">Voir le détail</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for show in shows %}
+                <tr>
+                    <th scope="row">
+                        {{ show.name }}
+                    </th>
+                    <td>
+                        {{ show.type }}
+                    </td>
+                    <td>
+                        {{ show.studio }}
+                    </td>
+                    <td>
+                        {{ show.genre }}
+                    </td>
+                    <td>
+                        <a href=" {{ path('app_show_details', {name: show.name}) }} ">Voir plus</a>
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock %}

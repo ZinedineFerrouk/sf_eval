@@ -1,0 +1,64 @@
+{
+	"info": {
+		"_postman_id": "bab24629-10ef-43d0-8947-ef0ac60778dc",
+		"name": "Postman Collection for Eval Symfony",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17771132"
+	},
+	"item": [
+		{
+			"name": "Create a Show",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Transporteur\",\r\n    \"synopsis\": \"BMW c'est le feu\",\r\n    \"genre\": \"Action\",\r\n    \"type\": \"MOVIE\",\r\n    \"studio\": \"Je sais pas\" \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/create/show",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"create",
+						"show"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Shows",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/get-all",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"get-all"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

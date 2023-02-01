@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello HomeController!{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <h1 class="my-5">Créer un show:</h1>
+
+        {{ form_start(form, {'attr': {'novalidate': 'novalidate'}}) }}
+            <div class="form-group">
+                {{ form_label(form.name) }}
+                {{ form_widget(form.name, {'attr': {'class': 'form-control'}}) }}
+                {{ form_errors(form.name, {'attr': {'class': 'alert alert-primary'}}) }}
+            </div>
+            <div class="form-group">
+                {{ form_label(form.genre) }}
+                {{ form_widget(form.genre, {'attr': {'class': 'form-control'}}) }}
+                {{ form_errors(form.genre, {'attr': {'class': 'alert alert-primary'}}) }}
+            </div>
+            <div class="form-group">
+                {{ form_label(form.type) }}
+                {{ form_widget(form.type, {'attr': {'class': 'form-control'}}) }}
+                {{ form_errors(form.type, {'attr': {'class': 'alert alert-primary'}}) }}
+            </div>
+            <div class="form-group">
+                {{ form_label(form.studio) }}
+                {{ form_widget(form.studio, {'attr': {'class': 'form-control'}}) }}
+                {{ form_errors(form.studio, {'attr': {'class': 'alert alert-primary'}}) }}
+            </div>
+            <div class="form-group">
+                {{ form_label(form.synopsis) }}
+                {{ form_widget(form.synopsis, {'attr': {'class': 'form-control'}}) }}
+                {{ form_errors(form.synopsis, {'attr': {'class': 'alert alert-primary'}}) }}
+            </div>
+            <div class="form-group">
+                {{ form_row(form.submit, {'attr': {'class': 'btn btn-secondary'}}) }}
+            </div>
+        {{ form_end(form) }}
+    </div>
+{% endblock %}
