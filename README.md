@@ -19,3 +19,7 @@ In terminal at root of you project run :
 
 - To run dev serveur :
 `symfony serve --no-tls`
+
+---
+
+A Postman collection is available so you can test the `/create/show` endpoint
